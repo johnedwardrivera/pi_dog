@@ -5,15 +5,19 @@ const { Dog, Temperament } = require('../db')
 /**
 * Funcion para buscar los resultado a traves de el ID de dogByidApi dogByidDb
 */
-const getDogsByid = async (id) => {
-    const resultApi = await dogByidApi(id);
-    const resultDb = await dogByidDb(id)
-    const total = resultDb.concat(resultApi)
-    console.log("soy de la api ", resultApi)
-    console.log("soy la base de datos", resultDb)
-    console.log("soy el total", total)
+const getDogsByid = async (id ,source) => {
+    // const resultApi = await dogByidApi(id);
+    // const resultDb = await dogByidDb(id)
+    // const total = resultDb.concat(resultApi)
+    // console.log("soy de la api ", resultApi)
+    // console.log("soy la base de datos", resultDb)
+    // console.log("soy el total", total)
 
-    return total
+    // return total   
+    const dog = 
+    source == "api" ? await dogByidApi(id) : await dogByidDb(id) 
+
+    return dog
 
 
 }

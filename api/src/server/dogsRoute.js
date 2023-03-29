@@ -16,9 +16,10 @@ router.get('/dogs', async (req, res) => {
 
 })
 router.get('/dogs/id/:id', async (req, res) => {
-    const { id } = req.params;
+    const { id } = req.params; 
+    const source = isNaN(id) ? "bdd": "api";
     try {
-        const Byid = await getDogsByid(id)
+        const Byid = await getDogsByid(id ,source)
         res.json(Byid)
     } catch (error) {
         res.status(401).json(error.message)

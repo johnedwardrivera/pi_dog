@@ -16,58 +16,58 @@ const Detail = () => {
         console.log("llegue", detailDog)
 
     }, [dispatch,id])
-    // return (
-    //     <div className={style.container}>
-    //         {
-    //             detailDog.map((dog, index) => {
-    //                 return (
-    //                     <>
-    //                         {
-    //                             dog.Temperaments
+    return (
+        <div className={style.container}>
+            {
+                detailDog.map((dog, index) => {
+                    return (
+                        <>
+                            {
+                                dog.Temperaments
 
-    //                                 ? dog.Temperaments.map((db, index) => {
-    //                                     return (
-    //                                         <>
-    //                                             <Detailcard
-    //                                                 key={index}
-    //                                                 id={dog?.id}
-    //                                                 image={dog?.image}
-    //                                                 name={dog?.name}
-    //                                                 height={dog?.height}
-    //                                                 weight={dog?.weight}
-    //                                                 life_span={dog?.life_span}
-    //                                                 temperament={db?.name}
-    //                                             />
+                                    ? dog.Temperaments.map((db, index) => {
+                                        return (
+                                            <>
+                                                <Detailcard
+                                                    key={index}
+                                                    id={dog?.id}
+                                                    image={dog?.image}
+                                                    name={dog?.name}
+                                                    height={dog?.height}
+                                                    weight={dog?.weight}
+                                                    life_span={dog?.life_span}
+                                                    temperament={db?.name}
+                                                />
 
-    //                                         </>
-    //                                     )
-    //                                 })
+                                            </>
+                                        )
+                                    })
 
-    //                                 :
-    //                                 <>
-    //                                     <Detailcard
-    //                                         key={index}
-    //                                         id={dog?.id}
-    //                                         image={dog?.image.url}
-    //                                         name={dog?.name}
-    //                                         height={dog?.height.imperial}
-    //                                         weight={dog?.weight.imperial}
-    //                                         life_span={dog?.life_span}
-    //                                         temperament={dog?.temperament}
-    //                                     />
-    //                                 </>
-    //                         }
-    //                     </>
+                                    :
+                                    <>
+                                        <Detailcard
+                                            key={index}
+                                            id={dog?.id}
+                                            image={dog?.image.url}
+                                            name={dog?.name}
+                                            height={dog?.height.imperial}
+                                            weight={dog?.weight.imperial}
+                                            life_span={dog?.life_span}
+                                            temperament={dog?.temperament}
+                                        />
+                                    </>
+                            }
+                        </>
 
-    //                 )
+                    )
 
-    //             })
+                })
 
-    //         }
+            }
 
-    //     </div>
+        </div>
 
-    // )
+    )
 }
 
 export default Detail
