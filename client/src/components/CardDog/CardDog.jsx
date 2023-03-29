@@ -10,7 +10,7 @@ const CardDog = () => {
 
     useEffect(() => {
         dispatch(Alldogs())
-        console.log("hola ", dogs)
+        console.log("hola ", dogs)   
     }, [])
 
     return (

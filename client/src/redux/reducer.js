@@ -1,7 +1,8 @@
-import { GET_DOG } from "./action-types"
+import { GET_DOG, DOG_DETAIL } from "./action-types"
 const initialState = {
-    getAlldogs: []
-  
+    getAlldogs: [],
+    getDetail: []
+
 }
 
 const reducer = (state = initialState, action) => {
@@ -10,7 +11,12 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 getAlldogs: action.payload,
-            }     
+            }
+        case DOG_DETAIL:
+            return{ 
+                ...state,  
+                getDetail: action.payload,
+            }
 
         default:
             return { ...state }

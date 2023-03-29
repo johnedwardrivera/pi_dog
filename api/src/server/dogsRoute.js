@@ -18,13 +18,10 @@ router.get('/dogs', async (req, res) => {
 router.get('/dogs/id/:id', async (req, res) => {
     const { id } = req.params;
     try {
-        const { resultApi, resultDb } = await getDogsByid(id)
-        res.json({
-            resultApi,
-            resultDb
-        });
+        const Byid = await getDogsByid(id)
+        res.json(Byid)
     } catch (error) {
-        res.status(401).json(error)
+        res.status(401).json(error.message)
     }
 })
 

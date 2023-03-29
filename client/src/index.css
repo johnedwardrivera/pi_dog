@@ -5,12 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-  url("https://img.freepik.com/vector-premium/perros-dibujos-animados-hueso-grande_52569-946.jpg"); 
+  background-image:
+  url("https://www.dhresource.com/0x0/f2/albu/g5/M00/EB/51/rBVaI1iUcQSANb5IAAH0sAWxT2Q545.jpg"); 
   background-size: 100% 100%;  
-  background-repeat: no-repeat ;
-  height: auto; 
-
+  height: 100vh; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 code {

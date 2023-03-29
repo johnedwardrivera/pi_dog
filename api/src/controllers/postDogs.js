@@ -1,7 +1,7 @@
 const { Dog, Temperament } = require('../db')
  
          /**
-         * Funcion para cear un perro
+         * Funcion para crear un perro
          */
 const postDogs = async (objDog) => {
 
@@ -38,7 +38,7 @@ const postDogs = async (objDog) => {
         createDog.addTemperament(temData) 
         
           /**
-         *  mostrar los temperamentos
+         * y si existe se  mostrar los temperamentos
          */
         return Dog.findAll({
             include: [
