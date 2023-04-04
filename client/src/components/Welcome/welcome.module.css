@@ -36,12 +36,14 @@
 .h1{ 
     font-family: "Times New Roman", Times, serif; 
     display: flex;  
-    color:wheat;
+    color:white; 
+    font-weight: bold;
 }
 .p{ 
     font-family: "Times New Roman", Times, serif; 
     display: flex;  
-    color:wheat;
+    color: white; 
+    font-weight: bold;
 } 
 .iniciar{
     text-align: center;

@@ -6,12 +6,19 @@ import style from './CardDog.module.css'
 
 const CardDog = () => {
     const dispatch = useDispatch();
-    const dogs = useSelector((state) => state.getAlldogs);
+    const dogs = useSelector((state) => state.getAlldogs); 
+    //paginacion  
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerpage, setPostsPerpage] = useState(8)
 
     useEffect(() => {
         dispatch(Alldogs())
         console.log("hola ", dogs)   
-    }, [])
+    }, [])  
+    //paginacion 
+     const lastPostIndex = currentPage * postsPerpage 
+     const firstPostIndex = lastPostIndex - postsPerpage 
+    //  const currentPosts = Alldogs.slice(firstPostIndex , lastPostIndex)
 
     return (
         <div className={style.container}>

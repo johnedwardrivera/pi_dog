@@ -20,7 +20,9 @@ const Welcome = () => {
                     top: '25em'
                 }} ></img >
                 <h1 className={style.h1}>Welcome </h1>
+
                 <h2 className={style.p} htmlFor=""> Encuentra tu perro Ideal</h2>
+
                 <div className={style.containerbtn}>
 
                     <div className={style.btn}>

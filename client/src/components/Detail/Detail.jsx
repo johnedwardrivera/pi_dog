@@ -15,7 +15,7 @@ const Detail = () => {
         dispatch(getDogDetail(id))
         console.log("llegue", detailDog)
 
-    }, [dispatch,id])
+    }, [dispatch, id])
     return (
         <div className={style.container}>
             {
