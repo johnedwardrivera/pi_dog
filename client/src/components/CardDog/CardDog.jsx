@@ -1,29 +1,30 @@
 import { useDispatch, useSelector } from "react-redux";
 import { React, useEffect, useState } from "react";
 import { Alldogs } from '../../redux/actions'
-import CardDogItem from './CardDogItem' 
+import CardDogItem from './CardDogItem'
+import Paginate from '../Paginate/Paginate'
 import style from './CardDog.module.css'
 
 const CardDog = () => {
     const dispatch = useDispatch();
-    const dogs = useSelector((state) => state.getAlldogs); 
+    const dogs = useSelector((state) => state.getAlldogs);
     //paginacion  
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerpage, setPostsPerpage] = useState(8)
 
     useEffect(() => {
         dispatch(Alldogs())
-        console.log("hola ", dogs)   
-    }, [])  
+        console.log("hola ", dogs)
+    }, [])
     //paginacion 
-     const lastPostIndex = currentPage * postsPerpage 
-     const firstPostIndex = lastPostIndex - postsPerpage 
-    //  const currentPosts = Alldogs.slice(firstPostIndex , lastPostIndex)
+    const lastPostIndex = currentPage * postsPerpage
+    const firstPostIndex = lastPostIndex - postsPerpage
+    const currentPosts = dogs.slice(firstPostIndex, lastPostIndex)
 
     return (
         <div className={style.container}>
             {
-                dogs.map((dog, index) => {
+                currentPosts.map((dog, index) => {
                     return (
                         <>
                             {
@@ -60,6 +61,8 @@ const CardDog = () => {
                                         />
                                     </>
                             }
+
+
                         </>
 
                     )
@@ -67,6 +70,10 @@ const CardDog = () => {
                 })
 
             }
+            <div style={{backgroun:'black'}}>
+                <Paginate totalPosts={dogs.length} postsPerpage={postsPerpage} />
+            </div>
+
 
         </div>
 

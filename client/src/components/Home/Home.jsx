@@ -6,8 +6,8 @@ const Home = () => {
     return (
        <div> 
         <SearchBar/>   
-        <Paginate/>
-        <CardDog/>
+        <CardDog/> 
+        
 
        </div>
     )
